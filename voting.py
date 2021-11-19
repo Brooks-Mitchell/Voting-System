@@ -40,11 +40,11 @@ while True:
         print("\nNumber please!\n")
         continue
 
-n = int(ideas)
+number_of_ideas = int(ideas)
 options = {}
 players = {}
 
-for i in range (0, n):
+for i in range (number_of_ideas):
     player = input(f"\nPlayer {i + 1}, please enter your name: \n")
     opinion = input(f"\nAlright {player}, what's your plan: \n")
     print("\n"*30)
@@ -65,18 +65,12 @@ def decisions():
         print("That's not a option nitwit.")
         return decisions()
 
-# learning note for myself: template for updating dict
-# dict = {}
-# x = "The_Key"
-# y = "The_Value"
-# my_dict[x] = y
-
 # computer chooses a random option as winner
 def comp_decide():
-    x = list(options.items())
-    y = random.choice(x)
+    computer_options = list(options.items())
+    computer_decision = random.choice(computer_options)
     print(f"""
-    The computer has chosen {y[0]}!
+    The computer has chosen {computer_decision[0]}!
     """)
 
 # shows each player the available options before voting
