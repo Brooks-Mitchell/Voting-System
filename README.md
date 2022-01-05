@@ -1,4 +1,4 @@
-# practice
+# Voting System
 
 I started learning to code August 30th, 2021.
 
